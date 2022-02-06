@@ -3,5 +3,7 @@
 require './game.rb'
 require './mastermind_logic.rb'
 require './player_breaker.rb'
-player_breaker_game = PlayerBreaker.new
-player_breaker_game.play_game
+require './game_text.rb'
+
+game = Game.new
+game.play

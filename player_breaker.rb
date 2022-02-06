@@ -24,7 +24,7 @@ class PlayerBreaker
     @guess = gets.chomp.to_s.split('')
     if @guess.length != 4
       puts 'You need to write 4 numbers!'
-      guess_code
+      input_guess
     end
     @guess
   end

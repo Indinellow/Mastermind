@@ -25,7 +25,14 @@ class Game
   end
 
   def play
-    instruction
+    instructions
+    pick_role
+    if @choice == 'maker'
+      p 'that feature is coming soon'
+    else
+      player = PlayerBreaker.new
+      player.play_game
+    end
   end
 end
 

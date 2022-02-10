@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require './mastermind_logic.rb'
-require './computer_breaker.rb'
-require './player_breaker.rb'
+require './maker_game.rb'
+require './breaker_game.rb'
 require './game_text.rb'
 
 # class for the entire game
@@ -28,10 +28,11 @@ class Game
     instructions
     pick_role
     if @choice == 'maker'
-      p 'that feature is coming soon'
+      computer = MakerGame.new
+      computer.play_maker_game
     else
-      player = PlayerBreaker.new
-      player.play_game
+      player = BreakerGame.new
+      player.play_breaker_game
     end
   end
 end

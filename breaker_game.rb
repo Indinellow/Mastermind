@@ -4,7 +4,7 @@ require './mastermind_logic.rb'
 require './game.rb'
 
 # class for case when player chooses to be breaker
-class PlayerBreaker
+class BreakerGame
 
   include MastermindLogic
 
@@ -29,7 +29,7 @@ class PlayerBreaker
     @guess
   end
 
-  def play_one_round
+  def play_breaker_round
     @guess = input_guess
     if correct?(@guess,@code)
       p "you cracked the code :)"
@@ -42,9 +42,9 @@ class PlayerBreaker
     @tries += 1
   end
 
-  def play_game
+  def play_breaker_game
   while !@win && @tries <=12 
-    play_one_round    
+    play_breaker_round    
   end
   end
 end

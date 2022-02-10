@@ -2,8 +2,9 @@
 
 require './game.rb'
 require './mastermind_logic.rb'
-require './player_breaker.rb'
+require './breaker_game.rb'
+require './maker_game.rb'
 require './game_text.rb'
 
-game = Game.new
-game.play
+maker_game = MakerGame.new
+maker_game.play_maker_game
